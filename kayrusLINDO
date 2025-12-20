@@ -1,61 +1,57 @@
+--Minha Versão única - Magnus Modificações 
+--Ser tive outro igual, e meu ramake rsrsrs
+local MarketplaceService = game:GetService("MarketplaceService")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
+local RunService = game:GetService("RunService")
+local CoreGui = game:GetService("CoreGui")
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local PlayerMouse = Player:GetMouse()
+
 local redzlib = {
 	Themes = {
 		Darker = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(80, 0, 0)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(120, 0, 0)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(80, 0, 0))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(32.5, 32.5, 32.5)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(90, 0, 0),
-			["Color Stroke"] = Color3.fromRGB(140, 0, 0),
-			["Color Theme"] = Color3.fromRGB(255, 0, 0),
-			["Color Text"] = Color3.fromRGB(255, 200, 200),
-			["Color Dark Text"] = Color3.fromRGB(180, 80, 80)
+			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
+			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
+			["Color Theme"] = Color3.fromRGB(88, 101, 242),
+			["Color Text"] = Color3.fromRGB(243, 243, 243),
+			["Color Dark Text"] = Color3.fromRGB(180, 180, 180)
 		},
-
 		Dark = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(100, 0, 0)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(150, 0, 0)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(100, 0, 0))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(47.5, 47.5, 47.5)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(120, 0, 0),
-			["Color Stroke"] = Color3.fromRGB(170, 0, 0),
-			["Color Theme"] = Color3.fromRGB(255, 0, 0),
-			["Color Text"] = Color3.fromRGB(255, 220, 220),
-			["Color Dark Text"] = Color3.fromRGB(190, 90, 90)
+			["Color Hub 2"] = Color3.fromRGB(45, 45, 45),
+			
+			["Color Stroke"] = Color3.fromRGB(65, 65, 65),
+			["Color Theme"] = Color3.fromRGB(65, 150, 255),
+			["Color Text"] = Color3.fromRGB(245, 245, 245),
+			["Color Dark Text"] = Color3.fromRGB(190, 190, 190)
 		},
-
-		Purple = { -- agora tudo vermelho
+		Purple = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(90, 0, 0)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(140, 0, 0)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(90, 0, 0))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27.5, 25, 30)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(32.5, 32.5, 32.5)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(27.5, 25, 30))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(110, 0, 0),
-			["Color Stroke"] = Color3.fromRGB(160, 0, 0),
-			["Color Theme"] = Color3.fromRGB(255, 0, 0),
-			["Color Text"] = Color3.fromRGB(255, 210, 210),
-			["Color Dark Text"] = Color3.fromRGB(180, 80, 80),
-			["Color Dark Purple"] = Color3.fromRGB(200, 0, 0),
-			["Color Hub 9"] = Color3.fromRGB(0, 0, 0),
-			["Color Dark Greem"] = Color3.fromRGB(180, 0, 0)
-		},
-
-		Halloween = {
-			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(70, 0, 0)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(130, 0, 0)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(70, 0, 0))
-			}),
-			["Color Hub 2"] = Color3.fromRGB(90, 0, 0),
-			["Color Stroke"] = Color3.fromRGB(160, 0, 0),
-			["Color Theme"] = Color3.fromRGB(255, 0, 0),
-			["Color Text"] = Color3.fromRGB(255, 230, 230),
-			["Color Dark Text"] = Color3.fromRGB(190, 90, 90)
+			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
+			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
+			["Color Theme"] = Color3.fromRGB(179, 0, 255),
+			["Color Text"] = Color3.fromRGB(240, 240, 240),
+			["Color Dark Text"] = Color3.fromRGB(180, 180, 180),
+			["Color Dark Purple"] = Color3.fromRGB(179, 0, 255),
+			["Color Hub 9"] = Color3.fromRGB(0, 0, 0, 0),
+			["Color Dark Greem"] = Color3.fromRGB(43, 255, 0)
 		}
-	}
-}
 	},
 	Info = {
 		Version = "1.2.0"
@@ -63,7 +59,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Halloween"
+		Theme = "Purple"
 	},
 	Settings = {},
 	Connection = {},
@@ -96,6 +92,7 @@ local redzlib = {
 			["users"] = "rbxassetid //10747373426",
             ["baby"] = "rbxassetid://10709769732",
 			["ghost"] = "rbxassetid://10723396107",
+			
 		}
 	end)()
 }
@@ -883,63 +880,42 @@ function redzlib:MakeWindow(Configs)
 		Name = "Containers"
 	})
 
-local ParticleContainer = Create("Frame", Containers, {
-	Size = UDim2.new(1, 0, 1, 0),
-	BackgroundTransparency = 1,
-	Name = "ThemeParticles",
-	ZIndex = -5,
-	ClipsDescendants = true
-})
-
-local ParticleConfig = {
-	MaxParticles = 30,
-	SpawnRate = 0.1,
-	ParticleSize = {Min = 6, Max = 10},
-	ParticleSpeed = {Min = 15, Max = 25},
-	ParticleLifetime = 6
-}
-
-local PumpkinConfig = {
-	MaxPumpkins = 10,
-	SpawnRate = 1.2,
-	PumpkinSize = {Min = 40, Max = 70},
-	PumpkinSpeed = {Min = 10, Max = 20},
-	PumpkinLifetime = 10,
-	PumpkinIDs = {
-		"rbxassetid://11559843780621",
-		"rbxassetid://11559843780621",
-		"rbxassetid://3518927409",
-		"rbxassetid://3518927409"
-	},
-	FloatAmplitude = 2,
-	FloatFrequency = 2,
-	RotationEnabled = true,
-	RotationSpeed = {Min = 1, Max = 3}
-}
+	local ParticleContainer = Create("Frame", Containers, {
+		Size = UDim2.new(1, 0, 1, 0),
+		BackgroundTransparency = 1,
+		Name = "ThemeParticles",
+		ZIndex = -5,
+		ClipsDescendants = true
+	})
+	
+	local ParticleConfig = {
+		MaxParticles = 30,
+		SpawnRate = 0.1,
+		ParticleSize = {Min = 6, Max = 10},
+		ParticleSpeed = {Min = 15, Max = 25},
+		ParticleLifetime = 6
+	}
 
 local ActiveParticles = {}
-local ActivePumpkins = {}
 local LastSpawn = 0
-local LastPumpkinSpawn = 0
 
 local function CreateCyberpunkParticle()
 	if #ActiveParticles >= ParticleConfig.MaxParticles then return end
-	if not ParticleContainer or not ParticleContainer.Parent then return end
 	
 	local containerSize = ParticleContainer.AbsoluteSize
-	if containerSize.X <= 0 or containerSize.Y <= 0 then return end
-	
-	local startX = math.random(10, math.max(11, containerSize.X - 10))
+	local startX = math.random(10, containerSize.X - 10)
 	local startY = containerSize.Y + 20
+	
 	local size = math.random(ParticleConfig.ParticleSize.Min, ParticleConfig.ParticleSize.Max)
 	local speed = math.random(ParticleConfig.ParticleSpeed.Min, ParticleConfig.ParticleSpeed.Max)
+	
 	local particleColor = Theme["Color Theme"]
 	
 	local Particle = Create("Frame", ParticleContainer, {
 		Size = UDim2.fromOffset(size, size),
 		Position = UDim2.fromOffset(startX, startY),
 		BackgroundColor3 = particleColor,
-		BackgroundTransparency = 1,
+		BackgroundTransparency = 0.2,
 		BorderSizePixel = 0
 	})
 	
@@ -952,7 +928,7 @@ local function CreateCyberpunkParticle()
 		Position = UDim2.new(0.5, 0, 0.5, 0),
 		AnchorPoint = Vector2.new(0.5, 0.5),
 		BackgroundColor3 = particleColor,
-		BackgroundTransparency = 1,
+		BackgroundTransparency = 0.7,
 		ZIndex = -1
 	})
 	
@@ -969,170 +945,60 @@ local function CreateCyberpunkParticle()
 		OriginalColor = particleColor
 	}
 	
+	Particle.BackgroundTransparency = 1
+	Glow.BackgroundTransparency = 1
 	CreateTween({Particle, "BackgroundTransparency", 0.2, 0.8})
 	CreateTween({Glow, "BackgroundTransparency", 0.7, 0.8})
 	
 	table.insert(ActiveParticles, ParticleData)
 end
 
-local function UpdateCyberpunkParticles(deltaTime)
-	if not ParticleContainer or not ParticleContainer.Parent then
-		for i = #ActiveParticles, 1, -1 do
-			if ActiveParticles[i].Frame then
-				ActiveParticles[i].Frame:Destroy()
-			end
-			table.remove(ActiveParticles, i)
-		end
-		return
-	end
-	
-	local currentTime = tick()
+local function UpdateCyberpunkParticles()
+	local containerSize = ParticleContainer.AbsoluteSize
 	
 	for i = #ActiveParticles, 1, -1 do
 		local particle = ActiveParticles[i]
-		
-		if particle.Frame and particle.Frame.Parent then
-			local elapsed = currentTime - particle.StartTime
-			local currentPos = particle.Frame.Position
-			local newY = currentPos.Y.Offset + (particle.Direction.Y * deltaTime)
+		local elapsed = tick() - particle.StartTime
+		if elapsed >= ParticleConfig.ParticleLifetime or 
+		   particle.Frame.Position.Y.Offset < -20 then
+
+			CreateTween({particle.Frame, "BackgroundTransparency", 1, 0.5})
+			CreateTween({particle.Glow, "BackgroundTransparency", 1, 0.5})
 			
-			if elapsed >= ParticleConfig.ParticleLifetime or newY < -20 then
-				CreateTween({particle.Frame, "BackgroundTransparency", 1, 0.5})
-				CreateTween({particle.Glow, "BackgroundTransparency", 1, 0.5})
-				
-				task.delay(0.5, function()
-					if particle.Frame and particle.Frame.Parent then
-						particle.Frame:Destroy()
-					end
-				end)
-				
-				table.remove(ActiveParticles, i)
-			else
-				particle.Frame.Position = UDim2.fromOffset(currentPos.X.Offset, newY)
-				
-				local lifeRatio = elapsed / ParticleConfig.ParticleLifetime
-				if lifeRatio > 0.8 then
-					local fadeAlpha = 0.2 * (1 - ((lifeRatio - 0.8) / 0.2))
-					particle.Frame.BackgroundTransparency = math.max(1 - fadeAlpha, 0.95)
+			task.spawn(function()
+				task.wait(0.5)
+				if particle.Frame and particle.Frame.Parent then
+					particle.Frame:Destroy()
 				end
-			end
-		else
+			end)
+			
 			table.remove(ActiveParticles, i)
+		else
+			local currentPos = particle.Frame.Position
+			local newY = currentPos.Y.Offset + particle.Direction.Y * 0.016
+			
+			particle.Frame.Position = UDim2.fromOffset(currentPos.X.Offset, newY)
+			local lifeRatio = elapsed / ParticleConfig.ParticleLifetime
+			if lifeRatio > 0.8 then
+				local fadeAlpha = 0.2 * (1 - ((lifeRatio - 0.8) / 0.2))
+				particle.Frame.BackgroundTransparency = math.max(1 - fadeAlpha, 0.95)
+			end
 		end
 	end
 end
 
 local function SpawnCyberpunkSystem()
-	if not MainFrame or not MainFrame.Visible then return end
-	
-	local currentTime = tick()
-	if currentTime - LastSpawn >= ParticleConfig.SpawnRate then
+	if tick() - LastSpawn >= ParticleConfig.SpawnRate and MainFrame.Visible then
 		CreateCyberpunkParticle()
-		LastSpawn = currentTime
+		LastSpawn = tick()
 	end
 end
 
-local function CreatePumpkinParticle()
-	if #ActivePumpkins >= PumpkinConfig.MaxPumpkins then return end
-	if not ParticleContainer or not ParticleContainer.Parent then return end
-	
-	local containerSize = ParticleContainer.AbsoluteSize
-	if containerSize.X <= 0 or containerSize.Y <= 0 then return end
-	
-	local startX = math.random(10, math.max(11, containerSize.X - 10))
-	local startY = containerSize.Y + 60
-	local size = math.random(PumpkinConfig.PumpkinSize.Min, PumpkinConfig.PumpkinSize.Max)
-	local speed = math.random(PumpkinConfig.PumpkinSpeed.Min, PumpkinConfig.PumpkinSpeed.Max)
-	local imageID = PumpkinConfig.PumpkinIDs[math.random(1, #PumpkinConfig.PumpkinIDs)]
-	local rotationSpeed = PumpkinConfig.RotationEnabled and math.random(PumpkinConfig.RotationSpeed.Min, PumpkinConfig.RotationSpeed.Max) or 0
-	
-	local Pumpkin = Create("ImageLabel", ParticleContainer, {
-		Size = UDim2.fromOffset(size, size),
-		Position = UDim2.fromOffset(startX, startY),
-		BackgroundTransparency = 1,
-		Image = imageID,
-		ImageColor3 = Color3.fromRGB(255, 140, 0),
-		ImageTransparency = 1,
-		ZIndex = -3,
-		Rotation = 0
-	})
-	
-	local PumpkinData = {
-		Frame = Pumpkin,
-		StartTime = tick(),
-		Speed = speed,
-		Direction = Vector2.new(0, -speed),
-		RotationSpeed = rotationSpeed,
-		FloatOffset = math.random(0, 360),
-		InitialX = startX
-	}
-	
-	CreateTween({Pumpkin, "ImageTransparency", 0.1, 0.8})
-	
-	table.insert(ActivePumpkins, PumpkinData)
-end
 
-local function UpdatePumpkinParticles(deltaTime)
-	if not ParticleContainer or not ParticleContainer.Parent then
-		for i = #ActivePumpkins, 1, -1 do
-			if ActivePumpkins[i].Frame then
-				ActivePumpkins[i].Frame:Destroy()
-			end
-			table.remove(ActivePumpkins, i)
-		end
-		return
-	end
-	
-	local currentTime = tick()
-	
-	for i = #ActivePumpkins, 1, -1 do
-		local pumpkin = ActivePumpkins[i]
-		
-		if pumpkin.Frame and pumpkin.Frame.Parent then
-			local elapsed = currentTime - pumpkin.StartTime
-			local currentPos = pumpkin.Frame.Position
-			local newY = currentPos.Y.Offset + (pumpkin.Direction.Y * deltaTime)
-			
-			if elapsed >= PumpkinConfig.PumpkinLifetime or newY < -70 then
-				CreateTween({pumpkin.Frame, "ImageTransparency", 1, 0.6, true})
-				task.delay(0.6, function()
-					if pumpkin.Frame and pumpkin.Frame.Parent then
-						pumpkin.Frame:Destroy()
-					end
-				end)
-				table.remove(ActivePumpkins, i)
-			else
-				local floatX = math.sin((currentTime * PumpkinConfig.FloatFrequency) + pumpkin.FloatOffset) * PumpkinConfig.FloatAmplitude
-				local newX = pumpkin.InitialX + floatX
-				
-				pumpkin.Frame.Position = UDim2.fromOffset(newX, newY)
-				
-				if PumpkinConfig.RotationEnabled then
-					pumpkin.Frame.Rotation = (pumpkin.Frame.Rotation + (pumpkin.RotationSpeed * deltaTime * 60)) % 360
-				end
-			end
-		else
-			table.remove(ActivePumpkins, i)
-		end
-	end
-end
-
-local function SpawnPumpkinSystem()
-	if not MainFrame or not MainFrame.Visible then return end
-	
-	local currentTime = tick()
-	if currentTime - LastPumpkinSpawn >= PumpkinConfig.SpawnRate then
-		CreatePumpkinParticle()
-		LastPumpkinSpawn = currentTime
-	end
-end
-
-local ParticleConnection = RunService.Heartbeat:Connect(function(deltaTime)
-	UpdateCyberpunkParticles(deltaTime)
-	SpawnCyberpunkSystem()
-	UpdatePumpkinParticles(deltaTime)
-	SpawnPumpkinSystem()
-end)
+	local ParticleConnection = RunService.Heartbeat:Connect(function()
+		UpdateCyberpunkParticles()
+		SpawnCyberpunkSystem()
+	end)
 
 	local ControlSize1, ControlSize2 = MakeDrag(Create("ImageButton", MainFrame, {
 		Size = UDim2.new(0, 35, 0, 35),
@@ -2257,88 +2123,6 @@ end
 			function TextBox:Destroy() Button:Destroy() end
 			return TextBox
 		end
-		
-function Tab:AddLabel(Configs)
-    local LabelText = (type(Configs) == "string" and Configs)
-        or (Configs and (Configs[1] or Configs.Name or Configs.Title))
-        or "Label"
-
-    -- Fundo do label (igual aos outros elementos)
-    local Frame = InsertTheme(Create("Frame", Container, {
-        Size = UDim2.new(1, 0, 0, 25),
-        BackgroundColor3 = Theme["Color Hub 2"],
-        BorderColor3 = Theme["Color Stroke"],
-        Name = "Option",
-    }), "Background")
-
-    -- Canto arredondado
-    Create("UICorner", Frame, { CornerRadius = UDim.new(0, 4) })
-
-    -- Padding interno
-    Create("UIPadding", Frame, {
-        PaddingLeft = UDim.new(0, 10),
-        PaddingRight = UDim.new(0, 10),
-        PaddingTop = UDim.new(0, 2),
-        PaddingBottom = UDim.new(0, 2),
-    })
-
-    -- Texto do label
-    local TextLabel = InsertTheme(Create("TextLabel", Frame, {
-        Font = Enum.Font.BuilderSansBold,
-        Text = LabelText,
-        TextColor3 = Theme["Color Dark Text"],
-        Size = UDim2.new(1, -10, 1, 0),
-        BackgroundTransparency = 1,
-        TextSize = 12,
-        TextXAlignment = Enum.TextXAlignment.Left,
-        TextWrapped = false,
-        RichText = true,
-    }), "DarkText")
-
-    -- Guarda referência como nas outras opções
-    table.insert(redzlib.Options, {
-        type = "Label",
-        Name = LabelText,
-        func = TextLabel,
-    })
-
-    -- API do objeto retornado
-    local Label = {}
-
-    function Label:Set(text)
-        if text then
-            TextLabel.Text = tostring(text)
-        end
-    end
-
-    function Label:Get()
-        return TextLabel.Text
-    end
-
-    function Label:Visible(bool)
-        if bool == nil then
-            Funcs:ToggleVisible(Frame)
-        else
-            Funcs:ToggleVisible(Frame, bool)
-        end
-    end
-
-    function Label:SetColor(color3)
-        if typeof(color3) == "Color3" then
-            TextLabel.TextColor3 = color3
-        end
-    end
-
-    function Label:Destroy()
-        if Frame and Frame.Parent then
-            Frame:Destroy()
-        end
-    end
-
-    return Label
-end
-
-
 function Tab:AddDiscordInvite(Configs)
 	local Title = Configs[1] or Configs.Name or Configs.Title or "Discord Server"
 	local Description = Configs[2] or Configs.Desc or Configs.Description or ""
@@ -2563,6 +2347,101 @@ function Tab:AddDiscordInvite(Configs)
 	
 	return DiscordInvite
 end
+		--[[function Tab:AddDiscordInvite(Configs)
+			local Title = Configs[1] or Configs.Name or Configs.Title or "Discord"
+			local Desc = Configs.Desc or Configs.Description or ""
+			local Logo = Configs[2] or Configs.Logo or ""
+			local Invite = Configs[3] or Configs.Invite or ""
+			
+			local InviteHolder = Create("Frame", Container, {
+				Size = UDim2.new(1, 0, 0, 80),
+				Name = "Option",
+				BackgroundTransparency = 1
+			})
+			
+			local InviteLabel = Create("TextLabel", InviteHolder, {
+				Size = UDim2.new(1, 0, 0, 15),
+				Position = UDim2.new(0, 5),
+				TextColor3 = Color3.fromRGB(40, 150, 255),
+				Font = Enum.Font.GothamBold,
+				TextXAlignment = "Left",
+				BackgroundTransparency = 1,
+				TextSize = 10,
+				Text = Invite
+			})
+			
+			local FrameHolder = InsertTheme(Create("Frame", InviteHolder, {
+				Size = UDim2.new(1, 0, 0, 65),
+				AnchorPoint = Vector2.new(0, 1),
+				Position = UDim2.new(0, 0, 1),
+				BackgroundColor3 = Theme["Color Hub 2"]
+			}), "Frame")Make("Corner", FrameHolder)
+			
+			local ImageLabel = Create("ImageLabel", FrameHolder, {
+				Size = UDim2.new(0, 30, 0, 30),
+				Position = UDim2.new(0, 7, 0, 7),
+				Image = Logo,
+				BackgroundTransparency = 1
+			})Make("Corner", ImageLabel, UDim.new(0, 4))Make("Stroke", ImageLabel)
+			
+			local LTitle = InsertTheme(Create("TextLabel", FrameHolder, {
+				Size = UDim2.new(1, -52, 0, 15),
+				Position = UDim2.new(0, 44, 0, 7),
+				Font = Enum.Font.GothamBold,
+				TextColor3 = Theme["Color Text"],
+				TextXAlignment = "Left",
+				BackgroundTransparency = 1,
+				TextSize = 10,
+				Text = Title
+			}), "Text")
+			
+			local LDesc = InsertTheme(Create("TextLabel", FrameHolder, {
+				Size = UDim2.new(1, -52, 0, 0),
+				Position = UDim2.new(0, 44, 0, 22),
+				TextWrapped = "Y",
+				AutomaticSize = "Y",
+				Font = Enum.Font.Gotham,
+				TextColor3 = Theme["Color Dark Text"],
+				TextXAlignment = "Left",
+				BackgroundTransparency = 1,
+				TextSize = 8,
+				Text = Desc
+			}), "DarkText")
+			
+			local JoinButton = Create("TextButton", FrameHolder, {
+				Size = UDim2.new(1, -14, 0, 16),
+				AnchorPoint = Vector2.new(0.5, 1),
+				Position = UDim2.new(0.5, 0, 1, -7),
+				Text = "Join",
+				Font = Enum.Font.GothamBold,
+				TextSize = 12,
+				TextColor3 = Color3.fromRGB(220, 220, 220),
+				BackgroundColor3 = Color3.fromRGB(50, 150, 50)
+			})Make("Corner", JoinButton, UDim.new(0, 5))
+			
+			local ClickDelay
+			JoinButton.Activated:Connect(function()
+				setclipboard(Invite)
+				if ClickDelay then return end
+				
+				ClickDelay = true
+				SetProps(JoinButton, {
+					Text = "Copied to Clipboard",
+					BackgroundColor3 = Color3.fromRGB(100, 100, 100),
+					TextColor3 = Color3.fromRGB(150, 150, 150)
+				})task.wait(5)
+				SetProps(JoinButton, {
+					Text = "Join",
+					BackgroundColor3 = Color3.fromRGB(50, 150, 50),
+					TextColor3 = Color3.fromRGB(220, 220, 220)
+				})ClickDelay = false
+			end)
+			
+			local DiscordInvite = {}
+			function DiscordInvite:Destroy() InviteHolder:Destroy() end
+			function DiscordInvite:Visible(...) Funcs:ToggleVisible(InviteHolder, ...) end
+			return DiscordInvite
+		end]] --777
 		return Tab
 	end
 	
@@ -2571,6 +2450,5 @@ end
 
 	return Window
 end
-
 
 return redzlib
