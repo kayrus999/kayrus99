@@ -10,47 +10,47 @@ local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 local PlayerMouse = Player:GetMouse()
 
-local redzlib = {
+redzlib = {
 	Themes = {
-		Darker = {
-			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(78, 1, 1)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(90, 5, 5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(78, 1, 1))
-			}),
-			["Color Hub 2"] = Color3.fromRGB(78, 1, 1),
-			["Color Stroke"] = Color3.fromRGB(100, 10, 10),
-			["Color Theme"] = Color3.fromRGB(78, 1, 1),
-			["Color Text"] = Color3.fromRGB(243, 243, 243),
-			["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
-		},
-		Dark = {
-			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(78, 1, 1)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(95, 8, 8)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(78, 1, 1))
-			}),
-			["Color Hub 2"] = Color3.fromRGB(78, 1, 1),
-			["Color Stroke"] = Color3.fromRGB(110, 15, 15),
-			["Color Theme"] = Color3.fromRGB(78, 1, 1),
-			["Color Text"] = Color3.fromRGB(245, 245, 245),
-			["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
-		},
-		Purple = {
-			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(78, 1, 1)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(90, 5, 5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(78, 1, 1))
-			}),
-			["Color Hub 2"] = Color3.fromRGB(78, 1, 1),
-			["Color Stroke"] = Color3.fromRGB(100, 10, 10),
-			["Color Theme"] = Color3.fromRGB(78, 1, 1),
-			["Color Text"] = Color3.fromRGB(240, 240, 240),
-			["Color Dark Text"] = Color3.fromRGB(255, 255, 255),
-			["Color Dark Purple"] = Color3.fromRGB(78, 1, 1),
-			["Color Hub 9"] = Color3.fromRGB(0, 0, 0, 0),
-			["Color Dark Greem"] = Color3.fromRGB(78, 1, 1)
-		}
+	Darker = {
+	["Color Hub 1"] = ColorSequence.new({
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),
+		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))
+	}),
+	["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
+	["Color Stroke"] = Color3.fromRGB(0, 0, 0),
+	["Color Theme"] = Color3.fromRGB(255, 255, 255),
+	["Color Text"] = Color3.fromRGB(255, 255, 255),
+	["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
+},
+Dark = {
+	["Color Hub 1"] = ColorSequence.new({
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),
+		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))
+	}),
+	["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
+	["Color Stroke"] = Color3.fromRGB(0, 0, 0),
+	["Color Theme"] = Color3.fromRGB(255, 255, 255),
+	["Color Text"] = Color3.fromRGB(255, 255, 255),
+	["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
+},
+Blue = {
+	["Color Hub 1"] = ColorSequence.new({
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),
+		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))
+	}),
+	["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
+	["Color Stroke"] = Color3.fromRGB(0, 0, 0),
+	["Color Theme"] = Color3.fromRGB(255, 255, 255),
+	["Color Text"] = Color3.fromRGB(255, 255, 255),
+	["Color Dark Text"] = Color3.fromRGB(255, 255, 255),
+	["Color Dark Blue"] = Color3.fromRGB(255, 255, 255),
+	["Color Hub 9"] = Color3.fromRGB(0, 0, 0),
+	["Color Dark Cyan"] = Color3.fromRGB(255, 255, 255)
+}
 	},
 	Info = {
 		Version = "1.2.0"
@@ -2450,4 +2450,4 @@ end
 	return Window
 end
 
-return redzlib
+return redzlibp
