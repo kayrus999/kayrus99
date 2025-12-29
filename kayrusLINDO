@@ -19,7 +19,7 @@ local redzlib = {
 		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 0, 255))
 	}),
 	["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
-	["Color Stroke"] = Color3.fromRGB(128, 0, 255),
+	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
 	["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
@@ -31,7 +31,7 @@ Dark = {
 		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 0, 255))
 	}),
 	["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
-	["Color Stroke"] = Color3.fromRGB(128, 0, 255),
+	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
 	["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
@@ -43,7 +43,7 @@ Blue = {
 		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 0, 255))
 	}),
 	["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
-	["Color Stroke"] = Color3.fromRGB(128, 0, 255),
+	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
 	["Color Dark Text"] = Color3.fromRGB(255, 255, 255),
