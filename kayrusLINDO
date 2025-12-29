@@ -14,33 +14,33 @@ local redzlib = {
 	Themes = {
 		Darker = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(128, 0, 255)),
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(78, 1, 1)),
 				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(90, 5, 5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 0, 255)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(78, 1, 1))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(128, 0, 255),
-			["Color Stroke"] = Color3.fromRGB(128, 0, 255),
+			["Color Hub 2"] = Color3.fromRGB(78, 1, 1),
+			["Color Stroke"] = Color3.fromRGB(100, 10, 10),
 			["Color Theme"] = Color3.fromRGB(255, 255, 255),
 			["Color Text"] = Color3.fromRGB(255, 255, 255),
-			["Color Dark Text"] = Color3.fromRGB(128, 0, 255)
+			["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
 		},
 		Dark = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(128, 0, 255)),
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(78, 1, 1)),
 				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(95, 8, 8)),
-				Color3.fromRGB(128, 0, 255)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(78, 1, 1))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(128, 0, 255),
-			["Color Stroke"] = Color3.fromRGB(128, 0, 255),
+			["Color Hub 2"] = Color3.fromRGB(78, 1, 1),
+			["Color Stroke"] = Color3.fromRGB(110, 15, 15),
 			["Color Theme"] = Color3.fromRGB(255, 255, 255),
 			["Color Text"] = Color3.fromRGB(255, 255, 255),
-			["Color Dark Text"] = Color3.fromRGB(128, 0, 255)
+			["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
 		},
 		Purple = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(128, 0, 255)),
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(78, 1, 1)),
 				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(90, 5, 5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 0, 255)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(78, 1, 1))
 			}),
 			["Color Hub 2"] = Color3.fromRGB(78, 1, 1),
 			["Color Stroke"] = Color3.fromRGB(100, 10, 10),
