@@ -49,7 +49,7 @@ Blue = {
 	["Color Dark Text"] = Color3.fromRGB(255, 255, 0),
 	["Color Dark Blue"] = Color3.fromRGB(255, 255, 255),
 	["Color Hub 9"] = Color3.fromRGB(0, 0, 0),
-	["Color Dark Cyan"] = Color3.fromRGB(255, 255, 255)
+	["Color Dark Cyan"] = Color3.fromRGB(255, 255, 0)
 }
 	},
 	Info = {
