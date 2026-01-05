@@ -1,5 +1,3 @@
---Minha Versão única - Magnus Modificações 
---Ser tive outro igual, e meu ramake rsrsrs
 local MarketplaceService = game:GetService("MarketplaceService")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
