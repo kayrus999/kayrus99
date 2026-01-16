@@ -14,11 +14,11 @@ local redzlib = {
 	Themes = {
 	Darker = {
 	["Color Hub 1"] = ColorSequence.new({
-		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(70, 45, 30)),
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(60, 40, 20)),
 		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
-		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(70, 45, 30))
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(60, 40, 20))
 	}),
-	["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
+	["Color Hub 2"] = Color3.fromRGB(#55, 255, 255),
 	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
@@ -26,11 +26,11 @@ local redzlib = {
 },
 Dark = {
 	["Color Hub 1"] = ColorSequence.new({
-		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(70, 45, 30)),
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(60, 40, 20)),
 		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
-		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(70, 45, 30))
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(60, 40, 20))
 	}),
-	["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
+	["Color Hub 2"] = Color3.fromRGB(255, 255, 255),
 	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
@@ -38,11 +38,12 @@ Dark = {
 },
 Blue = {
 	["Color Hub 1"] = ColorSequence.new({
-		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(70, 45, 30)),
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(60, 40, 20)),
 		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
-		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(70, 45, 30))
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(60, 40, 20))
+)
 	}),
-	["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
+	["Color Hub 2"] = Color3.fromRGB(255, 255, 255),
 	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
