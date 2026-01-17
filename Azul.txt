@@ -19,7 +19,7 @@ Themes = {
         ["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
         ["Color Stroke"] = Color3.fromRGB(255, 150, 200),
         ["Color Theme"] = Color3.fromRGB(15, 15, 15),
-        ["Color Text"] = Color3.fromRGB(255, 255, 255),
+        ["Color Text"] = Color3.fromRGB(128, 0, 128),
         ["Color Dark Text"] = Color3.fromRGB(255, 200, 230)
     },
     Dark = {  
@@ -31,7 +31,7 @@ Themes = {
 ["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
 ["Color Stroke"] = Color3.fromRGB(140,140,140),
 ["Color Theme"] = Color3.fromRGB(12,12,12),
-["Color Text"] = Color3.fromRGB(230,230,230),
+["Color Text"] = Color3.fromRGB(128,128,128),
 ["Color Dark Text"] = Color3.fromRGB(180,180,180)
     },
 }, 
@@ -2869,4 +2869,5 @@ end
 	return Window
 end
 return redzlib
+
 
