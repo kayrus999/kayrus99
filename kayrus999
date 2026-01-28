@@ -17,7 +17,7 @@ Themes = {
             ColorSequenceKeypoint.new(1.00, Color3.fromRGB(70, 50, 120))
         }),
         ["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
-        ["Color Stroke"] = Color3.fromRGB(20, 20, 20),
+        ["Color Stroke"] = Color3.fromRGB(200, 200, 200),
         ["Color Theme"] = Color3.fromRGB(25, 15, 35),
         ["Color Text"] = Color3.fromRGB(255, 255, 255),
         ["Color Dark Text"] = Color3.fromRGB(255, 255, 255)
@@ -2869,6 +2869,7 @@ end
 	return Window
 end
 return redzlib
+
 
 
 
