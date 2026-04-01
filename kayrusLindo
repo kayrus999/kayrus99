@@ -41,7 +41,7 @@ Blue = {
 		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(128, 0, 128)),
 		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 255)),
 		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 0, 128))
-	}
+	}),
 	["Color Hub 2"] = Color3.fromRGB(255, 255, 255),
 	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
